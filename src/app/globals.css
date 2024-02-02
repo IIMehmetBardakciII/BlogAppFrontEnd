@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+   :root{
+      --color-bg:255 255 255;
+      --color-textColor:0 0 0;
+      --color-softBg: 240 240 240;
+      --color-softTextColor:98 98 98;
+
+   }
+
+
+ 
+}
+
+
+.dark{
+   --color-bg:15 23 42;
+   --color-textColor:221 221 221 ;
+   --color-softBg:31 39 58;
+   --color-softTextColor:166 166 166;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+   color: rgb(0,0, 0);
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+ a{
+    text-decoration: none;
+    color: inherit;
+ }
+
+ .container1{
+    @apply min-h-[100vh]    bg-bg text-textColor
+
+ }
+
+ .wrapper{
+    @apply max-w-[1536px] mx-auto px-[80px] 
+    max-2xl:max-w-[1366px] 
+    max-xl:max-w-[1024px] max-xl:px-40
+    max-lg:max-w-[768px] 
+    max-md:max-w-[640px]    
+    max-sm:max-w-[640px]
+
+ }
+
+
+
+ @layer components{
+
+   .themetoggle{
+      @apply w-[40px] h-[20px] rounded-[50px] cursor-pointer
+      flex bg-textColor items-center  justify-between relative
+   }
+
+   .loginButton{
+      @apply p-[20px] text-white border-none font-bold rounded-[5px] cursor-pointer  flex items-center justify-center max-sm:font-[400] max-sm:text-[14px]
+   }  
+
+
+   .button{
+      @apply w-[36px] h-[36px] rounded-[50%] bg-transparent border-[1px] border-solid border-textColor flex items-center justify-center
+      cursor-pointer
+   }
+ 
+   .publish{
+
+      @apply absolute -top-[70px] -right-[150px] px-[20px] py-[10px] border-none
+      bg-[#1a8917] text-white cursor-pointer rounded-[20px]
+
+   }
+
+
+
+ }
+
+
+ .ql-container{    
+
+   @apply text-[28px] !important
+
+}
+
+ 
+ .quill > .ql-container > .ql-editor.ql-blank::before{
+
+
+   @apply text-[#b3b3b1]
+}
+
